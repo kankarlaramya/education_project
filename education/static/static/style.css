@@ -1,0 +1,10 @@
+body {
+    background-color: aquamarine;
+}
+
+body {
+    background-image: url('images.jpeg');
+    background-size: cover;  
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+}    

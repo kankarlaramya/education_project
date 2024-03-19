@@ -1,0 +1,35 @@
+
+{% extends 'education/base.html' %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+</head>
+<body>
+    {% block body %}
+    {% for task in task_list%}
+    <br>
+
+    <div class="row">
+        
+        <div class="col-md-4 offset-md-6",>
+            <div style="border: 1px solid #000;background-color:bisque" >
+            <ul>
+                <li>
+                    <a href="{% url 'education:detail' task.id%}">{{ task.id}}--{{ task.title}}</a>
+                </li>
+            </ul>
+            </div>
+        </div>
+    </div>
+
+    <br><br>
+    {% endfor%}
+    {% endblock%}    
+</body>
+</html>
+
